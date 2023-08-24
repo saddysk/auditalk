@@ -43,9 +43,9 @@ export default function WithSubnavigation() {
             onClick={onToggle}
             icon={
               isOpen ? (
-                <CloseIcon w={12} h={12} />
+                <CloseIcon w={[4,12]} h={12} />
               ) : (
-                <HamburgerIcon w={16} h={16} />
+                <HamburgerIcon w={[6,16]} h={16} />
               )
             }
             variant={"ghost"}

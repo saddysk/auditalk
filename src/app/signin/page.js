@@ -60,20 +60,25 @@ const Signin = () => {
     <>
       <Flex w={"100vw"} h={"100vh"} pos={"relative"}>
         {/* <Container maxW={"1440px"} margin="auto" py={24}></Container> */}
-        <Grid gridTemplateColumns={"1fr 1fr"}>
+        <Grid
+          gridTemplateColumns={"1fr 1fr"}
+          display={["flex", "grid"]}
+          flexDir={"column-reverse"}
+        >
           <Flex
             flexDir={"column"}
             gap={10}
             fontSize={"md"}
             justifyContent={"center"}
             alignItems={"center"}
+            margin={["auto", "unset"]}
           >
             <Heading>Welcome to Auditalk</Heading>
             <Button
               display={"flex"}
               type="button"
               px={10}
-              py={6}
+              py={[2, 6]}
               onClick={() => login()}
               gap={4}
               fontSize={20}
@@ -84,7 +89,14 @@ const Signin = () => {
               <FcGoogle fontSize={30} /> Sign In with google
             </Button>
           </Flex>
-          <Flex w={"100%"} h={"100%"} p={8} bg="#516EFF">
+          <Flex
+            w={"100%"}
+            p={8}
+            bg="#516EFF"
+            maxH={["60%", "unset"]}
+            h={"100%"}
+            mb={["auto", "unset"]}
+          >
             <Flex
               flexDir={"column"}
               alignItems={"center"}
@@ -94,8 +106,8 @@ const Signin = () => {
               pb={4}
             >
               {" "}
-              <Image w="100%" h="100%" src={SignIn} />
-              <Image src={Logo} />
+              <Image w={["70%", "100%"]} h="100%" src={SignIn} />
+              <Image display={["none", "unset"]} src={Logo} />
             </Flex>
           </Flex>
         </Grid>

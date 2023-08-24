@@ -29,9 +29,18 @@ const Home = () => {
       <Navbar />
       <Flex w={"100vw"} pos={"relative"}>
         <Container maxW={"1440px"} margin="auto" py={24}>
-          <Grid templateColumns={"1fr 1fr"} alignItems={"center"}>
+          <Grid
+            templateColumns={"1fr 1fr"}
+            alignItems={"center"}
+            display={["flex", "grid"]}
+            flexDir={"column"}
+          >
             <Flex flexDir={"column"} gap={"20px"}>
-              <Heading fontSize={"6xl"} fontWeight={"700"} lineHeight={"1.3"}>
+              <Heading
+                fontSize={["4xl", "6xl"]}
+                fontWeight={"700"}
+                lineHeight={"1.3"}
+              >
                 Professional{" "}
                 <Box display={"inline"} color={"#FFD700"}>
                   {" "}
@@ -39,11 +48,11 @@ const Home = () => {
                 </Box>
                 at home.
               </Heading>
-              <Text fontSize={"xl"} color={"#777777"}>
+              <Text fontSize={['lg', "xl"]} color={"#777777"}>
                 We Provide Hearing Checkup Right At Your Doorstep
               </Text>
             </Flex>
-            <Box w={"80%"} ml={"auto"}>
+            <Box w={"80%"} ml={"auto"} m={['auto', 'unset']} mt={[8, 'unset']}>
               <Image src={Hero} />
             </Box>
           </Grid>
@@ -52,7 +61,7 @@ const Home = () => {
       <Flex w={"100vw"} pos={"relative"} bg={"#F8FAFC"}>
         <Container maxW={"1440px"} margin="auto" py={24}>
           <Heading
-            fontSize={"5xl"}
+            fontSize={["4xl","5xl"]}
             fontWeight={"600"}
             lineHeight={"1.3"}
             color={"#FFD700"}
@@ -61,16 +70,22 @@ const Home = () => {
             Quick Actions
           </Heading>
           <Box width={"80%"} ml={"auto"} borderTop={"1px solid #BCBCBC"}></Box>
-          <Grid display={['flex' , 'grid']} flexDir={'column'} templateColumns={"1fr 1fr"} gap={20} mt={20}>
+          <Grid
+            display={["flex", "grid"]}
+            flexDir={"column"}
+            templateColumns={"1fr 1fr"}
+            gap={20}
+            mt={20}
+          >
             {APPOINTMENT_CARDS.map((c) => {
               return (
                 <Flex flexDir={"column"} gap={7} alignItems={"flex-start"}>
                   <Image src={c.cardImage} />
-                  <Heading fontSize={"2xl"}>{c.title}</Heading>
+                  <Heading fontSize={["lg", "2xl"]}>{c.title}</Heading>
                   <Button
                     as={"a"}
                     display={{ base: "none", md: "inline-flex" }}
-                    fontSize={"lg"}
+                    fontSize={["md","lg"]}
                     fontWeight={400}
                     color={"white"}
                     bg={"#516EFF"}
