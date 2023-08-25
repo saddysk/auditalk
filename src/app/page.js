@@ -48,11 +48,11 @@ const Home = () => {
                 </Box>
                 at home.
               </Heading>
-              <Text fontSize={['lg', "xl"]} color={"#777777"}>
+              <Text fontSize={["lg", "xl"]} color={"#777777"}>
                 We Provide Hearing Checkup Right At Your Doorstep
               </Text>
             </Flex>
-            <Box w={"80%"} ml={"auto"} m={['auto', 'unset']} mt={[8, 'unset']}>
+            <Box w={"80%"} ml={"auto"} m={["auto", "unset"]} mt={[8, "unset"]}>
               <Image src={Hero} />
             </Box>
           </Grid>
@@ -61,7 +61,7 @@ const Home = () => {
       <Flex w={"100vw"} pos={"relative"} bg={"#F8FAFC"}>
         <Container maxW={"1440px"} margin="auto" py={24}>
           <Heading
-            fontSize={["4xl","5xl"]}
+            fontSize={["4xl", "5xl"]}
             fontWeight={"600"}
             lineHeight={"1.3"}
             color={"#FFD700"}
@@ -84,8 +84,8 @@ const Home = () => {
                   <Heading fontSize={["lg", "2xl"]}>{c.title}</Heading>
                   <Button
                     as={"a"}
-                    display={{ base: "none", md: "inline-flex" }}
-                    fontSize={["md","lg"]}
+                    //display={{ md: "inline-flex" }}
+                    fontSize={["sm", "lg"]}
                     fontWeight={400}
                     color={"white"}
                     bg={"#516EFF"}
@@ -93,7 +93,7 @@ const Home = () => {
                     _hover={{
                       opacity: "80%",
                     }}
-                    px={24}
+                    px={[6, 24]}
                     py={4}
                   >
                     {c.btnContent}

@@ -3,8 +3,9 @@ import {
   Container,
   SimpleGrid,
   Stack,
-  Text, Grid,
-  Flex
+  Text,
+  Grid,
+  Flex,
 } from "@chakra-ui/react";
 import { LogoW } from "../assets";
 import Image from "next/image";
@@ -40,7 +41,7 @@ export default function LargeWithLogoLeft() {
             </Stack>
             <Stack
               align={"flex-start"}
-              borderRight={"1px solid #FFFFFF4D"}
+              borderRight={["0px", "1px solid #FFFFFF4D"]}
               pr={4}
             >
               <Text>We are welcoming you</Text>
@@ -52,10 +53,12 @@ export default function LargeWithLogoLeft() {
                 <br />X am- X pm
               </Text>
             </Stack>
-            <Stack align={"flex-start"} borderRight={"1px solid #FFFFFF4D"}>
+            <Stack
+              align={"flex-start"}
+              borderRight={["0px", "1px solid #FFFFFF4D"]}
+            >
               <Text>Important links</Text>
               <Grid templateColumns="1fr 0.5fr" mt={4}>
-               
                 <Stack align={"flex-start"}>
                   <Link href={"#"}>Terms & Conditions </Link>
                   <Link href={"https://wa.me/+917872836494"}>Support</Link>

@@ -177,6 +177,10 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
+    label: "Home",
+    href: "/",
+  },
+  {
     label: "Join Us",
     href: "/join",
   },
